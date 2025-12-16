@@ -131,6 +131,24 @@ body {
   }
 }
 
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset anchor scroll for fixed navbar */
+section {
+  scroll-margin-top: 120px; /* height of navbar */
+}
+
+
+
 /* <!-- ======================================== --> */
 /* SECTION */
 
