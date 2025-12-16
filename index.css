@@ -16,14 +16,22 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
+
+   /* adjust to navbar height */
 }
+
+
 
 /* ================= HEADER ================= */
 
 .custom-navbar {
   background-color: white;
   padding: 12px 0;
+  position: sticky;   /* 👈 makes navbar stick */
+  top: 0;             /* 👈 sticks to top */
+  z-index: 9999;      /* 👈 stays above all sections */
 }
+
 
 /* LOGO */
 .custom-navbar .navbar-brand img {
@@ -115,6 +123,14 @@ body {
   object-fit: cover;     /* fills screen without stretching */
   display: block;
 }
+ 
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .fullscreen-image {
+    height: 60vh;         /* better for mobile */
+  }
+}
+
 /* <!-- ======================================== --> */
 /* SECTION */
 
