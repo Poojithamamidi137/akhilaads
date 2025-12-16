@@ -25,7 +25,8 @@
 
     <!-- LOGO -->
     <a class="navbar-brand" href="#home">
-      <img src="logo.jpg" alt="Akhila Ads Logo">
+      <img src="logo.jpg" class="logo-bordered" alt="Akhila Ads Logo">
+
     </a>
 
     <!-- HAMBURGER -->
@@ -81,12 +82,64 @@
 
 <!-- ======================================== -->
 
+<section class="gallery-section">
+          
 
 
-<!-- FULL SCREEN IMAGE -->
-<section id="home" class="fullscreen-image">
-  <img src="https://www.iisindia.net/images/blog/advertising-agency-iis.jpeg">
+       
+        <h1  style="text-align:center; font-weight:700; color:#136ab5;margin-top:-50px;">
+  Any Advertisement, One Powerful Solution
+</h1>
+
+
+
+<!-- FULL SCREEN SLIDESHOW -->
+<section id="home" class="fullscreen-slider">
+
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+
+    <!-- INDICATORS -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+    </div>
+
+    <!-- SLIDES -->
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="https://www.iisindia.net/images/blog/advertising-agency-iis.jpeg" class="d-block w-100" alt="Advertising Agency">
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://stackby.com/blog/content/images/2022/05/advertising-agency-blog.png" class="d-block w-100" alt="Marketing Team">
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://www.myhoardings.com/ads/wp-content/uploads/2021/02/adevertisting.jpg" class="d-block w-100" alt="Brand Promotion">
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://colaninfotech.com/wp-content/uploads/2021/01/digitaladd.jpg" class="d-block w-100" alt="Creative Office">
+      </div>
+
+    </div>
+
+    <!-- CONTROLS -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+
 </section>
+
 
 
 <!-- ======================================== -->
@@ -99,30 +152,30 @@
 
 <!-- =========================================== -->
 <section class="text-image-section">
-  <div class="text-image-wrapper">
+  <div class="content-box">
 
-    <!-- LEFT IMAGE (ANIMATED) -->
-    <div class="image-box animate-left">
-      <div class="image-overlay"></div>
+    <!-- IMAGE -->
+    <div class="image-box">
       <img src="https://png.pngtree.com/thumb_back/fh260/background/20221213/pngtree-gritty-setting-for-an-advertising-agency-dark-grunge-room-photo-image_23376360.jpg" alt="Advertising Image">
     </div>
 
-    <!-- RIGHT CONTENT (ANIMATED) -->
-    <div class="text-box animate-right">
-      <h2 style="text-align: center; font-weight: bold;">About Us </h2>
-
+    <!-- TEXT -->
+    <div class="text-box">
+      <h2>About Us</h2>
       <p>
-       Akhila Ads is a full-service advertising agency delivering complete 360° advertising solutions.
-We specialize in digital marketing, outdoor advertising, and media promotions across multiple platforms.
-Our creative team designs impactful campaigns that capture attention and build strong brand identity.
-We focus on reaching the right audience through innovative, data-driven, and result-oriented strategies that drive consistent growth, stronger engagement, improved visibility, and long-term brand success.
+        Akhila Ads is a full-service advertising agency delivering complete 360° advertising solutions.
+        We specialize in digital marketing, outdoor advertising, and media promotions across multiple platforms.
+        Our creative team designs impactful campaigns that capture attention and build strong brand identity.
       </p>
     </div>
 
   </div>
 </section>
 
+
 <!-- ======================================== -->
+
+  <div class="creative-box">
 
   <div class="creative-grid">
 
@@ -163,7 +216,9 @@ We focus on reaching the right audience through innovative, data-driven, and res
     </div>
 
   </div>
-</section>
+
+</div>
+
 
 <!-- ======================================== -->
  
@@ -191,6 +246,8 @@ We focus on reaching the right audience through innovative, data-driven, and res
                          <!-- SERVICES SECTION -->
 
   
+
+  <div class="creative-box">
 
   <div class="tile-grid">
 
@@ -245,168 +302,174 @@ We focus on reaching the right audience through innovative, data-driven, and res
     </div>
 
   </div>
-</section>
+
+</div>
+
 
 
 <!-- ======================================= -->
  <section class="services-fa">
-  <h2 class="services-title">Expertise</h2>
+<!-- HEADING -->
+    <h1 class="services-title"
+        style="text-align:center; font-weight:700; color:#136ab5; margin-bottom:40px;">
+      Expertise
+    </h1>
+  <!-- BIG OUTER WHITE BOX -->
+  <div class="services-box">
 
-  <div class="services-grid">
+    
 
-    <div class="service-card">
-      <i class="fa-solid fa-share-nodes"></i>
-      <h3>Social Media Marketing</h3>
-      <p>
-        We help businesses build a powerful online presence through creative and
-        strategic social media marketing. Our approach focuses on engaging content,
-        consistent branding, and meaningful interaction with the right audience to
-        increase visibility, trust, and long-term growth across platforms.
-      </p>
-      <ul>
-        <li>Facebook & Instagram Marketing</li>
-        <li>Content Creation & Scheduling</li>
-        <li>Audience Engagement</li>
-      </ul>
-    </div>
+    <!-- SERVICES GRID -->
+    <div class="services-grid">
 
-    <div class="service-card">
-      <i class="fa-solid fa-tv"></i>
-      <h3>Cable TV Advertising</h3>
-      <p>
-        Cable TV advertising allows businesses to reach local audiences effectively.
-        We design impactful advertisements and schedule them at the right time on
-        regional channels to ensure strong brand recall and consistent visibility.
-      </p>
-      <ul>
-        <li>Local Channel Ads</li>
-        <li>Prime Time Scheduling</li>
-        <li>Regional Reach</li>
-      </ul>
-    </div>
+      <div class="service-card">
+        <i class="fa-solid fa-share-nodes"></i>
+        <h3>Social Media Marketing</h3>
+        <p>
+          We help businesses build a powerful online presence through creative and
+          strategic social media marketing. Our approach focuses on engaging content,
+          consistent branding, and meaningful interaction with the right audience.
+        </p>
+        <ul>
+          <li>Facebook & Instagram Marketing</li>
+          <li>Content Creation & Scheduling</li>
+          <li>Audience Engagement</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <i class="fa-brands fa-youtube"></i>
-      <h3>Facebook, Instagram & YouTube Ads</h3>
-      <p>
-        Our paid digital advertising services are the data-driven and performance-focused.
-        We create targeted campaigns that reach the right audience, improve conversions,
-        and deliver measurable business results across the digital platforms.
-      </p>
-      <ul>
-        <li>Paid Ad Campaigns</li>
-        <li>Audience Targeting</li>
-        <li>Analytics & Reporting</li>
-      </ul>
-    </div>
+      <div class="service-card">
+        <i class="fa-solid fa-tv"></i>
+        <h3>Cable TV Advertising</h3>
+        <p>
+          Cable TV advertising allows businesses to reach local audiences effectively.
+          We design impactful advertisements and schedule them at the right time on
+          regional channels to ensure strong brand recall.
+        </p>
+        <ul>
+          <li>Local Channel Ads</li>
+          <li>Prime Time Scheduling</li>
+          <li>Regional Reach</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <i class="fa-solid fa-film"></i>
-      <h3>Theatre Advertising</h3>
-      <p>
-        Theatre advertising delivers high-impact brand messaging in an immersive
-        environment. We place your ads before movie screenings to  the capture complete
-        audience attention and  the create strong brand recall.
-      </p>
-      <ul>
-        <li>Pre-Movie Ads</li>
-        <li>High Audience Attention</li>
-        <li>Local Visibility</li>
-      </ul>
-    </div>
+      <div class="service-card">
+        <i class="fa-brands fa-youtube"></i>
+        <h3>Facebook, Instagram & YouTube Ads</h3>
+        <p>
+          Our paid digital advertising services are data-driven and performance-focused.
+          We create targeted campaigns that reach the right audience and improve conversions.
+        </p>
+        <ul>
+          <li>Paid Ad Campaigns</li>
+          <li>Audience Targeting</li>
+          <li>Analytics & Reporting</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <i class="fa-solid fa-truck-moving"></i>
-      <h3>Mobile Van Advertising</h3>
-      <p>
-        Mobile van advertising promotes your brand while moving through busy streets
-        and  the neighborhoods. This method ensures wide coverage, repeated exposure, and
-         the effective communication with local audiences.
-      </p>
-      <ul>
-        <li>Route Planning</li>
-        <li>Audio Promotions</li>
-        <li>Wide Area Coverage</li>
-      </ul>
-    </div>
+      <div class="service-card">
+        <i class="fa-solid fa-film"></i>
+        <h3>Theatre Advertising</h3>
+        <p>
+          Theatre advertising delivers high-impact brand messaging in an immersive
+          environment by placing ads before movie screenings.
+        </p>
+        <ul>
+          <li>Pre-Movie Ads</li>
+          <li>High Audience Attention</li>
+          <li>Local Visibility</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <i class="fa-solid fa-display"></i>
-      <h3>LED Screen Advertising</h3>
-      <p>
-        LED screen advertising uses bright, eye-catching visuals placed in the  high-traffic
-        locations. This method helps brands grab attention quickly and  the communicate
-        messages effectively through dynamic digital displays.
-      </p>
-      <ul>
-        <li>Video Advertisements</li>
-        <li>Prime Locations</li>
-        <li>High Visibility</li>
-      </ul>
-    </div>
+      <div class="service-card">
+        <i class="fa-solid fa-truck-moving"></i>
+        <h3>Mobile Van Advertising</h3>
+        <p>
+          Mobile van advertising promotes your brand while moving through busy streets,
+          ensuring wide coverage and repeated exposure.
+        </p>
+        <ul>
+          <li>Route Planning</li>
+          <li>Audio Promotions</li>
+          <li>Wide Area Coverage</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <i class="fa-solid fa-taxi"></i>
-      <h3>Auto Rickshaw Advertising</h3>
-      <p>
-        Auto rickshaw advertising is a cost-effective outdoor marketing solution that
-        delivers continuous brand exposure. It is ideal for local businesses aiming
-        for strong recall among daily commuters.
-      </p>
-      <ul>
-        <li>Affordable Promotion</li>
-        <li>Local Targeting</li>
-        <li>High Recall Value</li>
-      </ul>
-    </div>
+      <div class="service-card">
+        <i class="fa-solid fa-display"></i>
+        <h3>LED Screen Advertising</h3>
+        <p>
+          LED screen advertising uses bright visuals placed in high-traffic locations
+          to grab attention and communicate messages effectively.
+        </p>
+        <ul>
+          <li>Video Advertisements</li>
+          <li>Prime Locations</li>
+          <li>High Visibility</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <i class="fa-solid fa-bullhorn"></i>
-      <h3>Outdoor Advertising</h3>
-      <p>
-        Outdoor advertising helps brands gain massive exposure through hoardings,
-        banners, and public displays. We strategically place ads in high-traffic
-        locations to maximize reach and brand recognition.
-      </p>
-      <ul>
-        <li>Billboards</li>
-        <li>Flex Banners</li>
-        <li>Public Places</li>
-      </ul>
-    </div>
+      <div class="service-card">
+        <i class="fa-solid fa-taxi"></i>
+        <h3>Auto Rickshaw Advertising</h3>
+        <p>
+          Auto rickshaw advertising is a cost-effective outdoor solution that delivers
+          continuous brand exposure for local businesses.
+        </p>
+        <ul>
+          <li>Affordable Promotion</li>
+          <li>Local Targeting</li>
+          <li>High Recall Value</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <i class="fa-solid fa-newspaper"></i>
-      <h3>Print & Electronic Media</h3>
-      <p>
-        Print and electronic media advertising connects brands with a wide audience
-        through newspapers, magazines, and television. This traditional approach
-        builds credibility and long-term trust among customers.
-      </p>
-      <ul>
-        <li>Newspaper Ads</li>
-        <li>Magazine Promotions</li>
-        <li>TV Media</li>
-      </ul>
-    </div>
+      <div class="service-card">
+        <i class="fa-solid fa-bullhorn"></i>
+        <h3>Outdoor Advertising</h3>
+        <p>
+          Outdoor advertising helps brands gain massive exposure through hoardings,
+          banners, and public displays in high-traffic locations.
+        </p>
+        <ul>
+          <li>Billboards</li>
+          <li>Flex Banners</li>
+          <li>Public Places</li>
+        </ul>
+      </div>
 
-    <div class="service-card">
-      <i class="fa-solid fa-building"></i>
-      <h3>Hoarding Advertising</h3>
-      <p>
-        Hoarding advertising provides long-lasting brand visibility through large
-        outdoor displays placed at prime locations. This form of advertising creates
-        a strong visual impact and continuous audience exposure.
-      </p>
-      <ul>
-        <li>Prime Locations</li>
-        <li>Long-Term Display</li>
-        <li>Strong Brand Impact</li>
-      </ul>
+      <div class="service-card">
+        <i class="fa-solid fa-newspaper"></i>
+        <h3>Print & Electronic Media</h3>
+        <p>
+          Print and electronic media advertising connects brands with wide audiences
+          through newspapers, magazines, and television.
+        </p>
+        <ul>
+          <li>Newspaper Ads</li>
+          <li>Magazine Promotions</li>
+          <li>TV Media</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <i class="fa-solid fa-building"></i>
+        <h3>Hoarding Advertising</h3>
+        <p>
+          Hoarding advertising provides long-lasting brand visibility through large
+          outdoor displays at prime locations.
+        </p>
+        <ul>
+          <li>Prime Locations</li>
+          <li>Long-Term Display</li>
+          <li>Strong Brand Impact</li>
+        </ul>
+      </div>
+
     </div>
 
   </div>
+
 </section>
+
 <!-- ================================================= -->
  <section class="clients-section">
   <h2>OUR CLIENTS FROM HYDERABAD</h2>
@@ -467,121 +530,137 @@ We focus on reaching the right audience through innovative, data-driven, and res
 </section>
 <!-- =============================== -->
  <section class="gallery-section">
-  <div class="gallery-wrapper">
+          
 
-    <!-- LEFT CONTENT -->
-    <div class="gallery-content">
-      <h2>Our Advertising Gallery</h2>
-      <p>
-        Explore our creative advertising works including digital campaigns,
-        outdoor hoardings, branding visuals, promotional creatives, and
-        marketing strategies that help brands stand out and connect with
-        audiences effectively.
-      </p>
+
+       
+        <h1  style="text-align:center; font-weight:700; color:#136ab5; margin-bottom:25px;">
+  Gallery</h1>
+
+
+          
+  
+
+  <div class="gallery-box">   <!-- 👈 BIG BOX START -->
+
+    <div class="gallery-wrapper">
+
+      <!-- LEFT CONTENT -->
+      <div class="gallery-content">
+        <h2>Our Advertising Gallery</h2>
+        <p>
+          Explore our creative advertising works including digital campaigns
+           and outdoor hoardings , branding visuals and promotional creatives and
+          marketing strategies that help brands stand out and connect with
+          audiences effectively.
+        </p>
+      </div>
+
+      <!-- RIGHT GALLERY WITH MARQUEE -->
+      <div class="gallery-marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="6" pauseonhover="true">
+          <div class="gallery-grid marquee-grid">
+
+            <div class="gallery-item">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfU7U_wj-gyuiOGHWpDAbl9EcPI8ZcTVtBOA&s">
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe">
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec">
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+            </div>
+
+          </div>
+        </marquee>
+      </div>
+
     </div>
 
-    <!-- RIGHT GALLERY WITH MARQUEE -->
-    <div class="gallery-marquee">
+  </div>  <!-- 👈 BIG BOX END -->
 
-      <marquee behavior="scroll" direction="left" scrollamount="6" pauseonhover="true">
-
-        <div class="gallery-grid marquee-grid">
-
-          <div class="gallery-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfU7U_wj-gyuiOGHWpDAbl9EcPI8ZcTVtBOA&s">
-          </div>
-
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe">
-          </div>
-
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec">
-          </div>
-
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-          </div>
-
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
-          </div>
-
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
-          </div>
-
-        </div>
-
-      </marquee>
-
-    </div>
-
-  </div>
 </section>
+
 
 <!-- ====================================== -->
 
 
-<section class="contact-section" id="contact">
-  <div class="contact-overlay">
-    <h2 class="contact-title">Contact Us</h2>
-  </div>
-</section>
+<section class="contact-box">
 
+  <!-- CONTACT TITLE -->
+  <section class="contact-section" id="contact">
+    <div class="contact-overlay">
+      <h2 class="contact-title">Contact Us</h2>
+    </div>
+  </section>
 
-  <!-- ======================== -->
-   <section class="contact-page" id="contact">
+  <section class="contact-page">
   <div class="contact-wrapper">
 
-    <!-- LEFT : FORM CARD (LEFT ➜ RIGHT) -->
-    <div class="contact-form card-left">
-      <h2>Let’s Talk what you're thinking</h2>
+    <!-- ONE WHITE CARD -->
+    <div class="contact-card">
 
-      <form>
-        <div class="form-row">
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="Company Name">
-        </div>
+      <!-- LEFT SIDE -->
+      <div class="contact-left">
+        <h2>Let’s Talk what you're thinking</h2>
 
-        <div class="form-row">
-          <input type="text" placeholder="Mobile No">
-          <input type="email" placeholder="Email Address">
-        </div>
+        <form>
+          <div class="form-row">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Company Name">
+          </div>
 
-        <select name="service">
-  <option value="">Select Service</option>
-  <option value="social-media">Social Media Marketing</option>
-  <option value="cable-tv">Cable TV Advertisements</option>
-  <option value="facebook-instagram-youtube">Facebook, Instagram & YouTube Ads</option>
-  <option value="theatre-ads">Theatre Ads (Cinema Halls)</option>
-  <option value="mobile-van">Mobile Van Advertising</option>
-  <option value="led-screens">LED Screen Advertising</option>
-  <option value="auto-rickshaw">Auto Rickshaw Advertising</option>
-  <option value="outdoor-advertising">Outdoor Advertising Agency</option>
-  <option value="print-electronic-media">Print & Electronic Media Ads</option>
-  <option value="hoardings">Hoarding Advertising</option>
-</select>
+          <div class="form-row">
+            <input type="text" placeholder="Mobile No">
+            <input type="email" placeholder="Email Address">
+          </div>
 
+          <select>
+            <option value="">Select Service</option>
+            <option>Social Media Marketing</option>
+            <option>Cable TV Advertising</option>
+            <option>Facebook, Instagram & YouTube Ads</option>
+            <option>Theatre Ads</option>
+            <option>Mobile Van Advertising</option>
+            <option>LED Screen Advertising</option>
+            <option>Outdoor Advertising</option>
+          </select>
 
-        <textarea placeholder="Describe Your Requirement"></textarea>
+          <textarea placeholder="Describe Your Requirement"></textarea>
 
-        <button type="submit">SUBMIT NOW</button>
-      </form>
-    </div>
+          <button type="submit">SUBMIT NOW</button>
+        </form>
+      </div>
 
-    <!-- RIGHT : DETAILS CARD (RIGHT ➜ LEFT) -->
-    <div class="contact-info card-right">
-      <h3>Akhila Ads</h3>
+      <!-- RIGHT SIDE -->
+      <div class="contact-right">
+        <h3>Akhila Ads</h3>
 
-      <p><i class="bi bi-telephone"></i> +91 9908262349</p>
-      <p><i class="bi bi-telephone"></i> +91 8790801171</p>
-      <p><i class="bi bi-envelope"></i> akhilaads2017@gmail.com</p>
-      <p><i class="bi bi-geo-alt"></i> Hyderabad, Telangana, India</p>
+        <p><i class="bi bi-telephone"></i> +91 9908262349</p>
+        <p><i class="bi bi-telephone"></i> +91 8790801171</p>
+        <p><i class="bi bi-envelope"></i> akhilaads2017@gmail.com</p>
+        <p><i class="bi bi-geo-alt"></i> Hyderabad, Telangana, India</p>
+      </div>
+
     </div>
 
   </div>
 </section>
+
 <!-- ================================================== -->
  <footer class="main-footer">
 

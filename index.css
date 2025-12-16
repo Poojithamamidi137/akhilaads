@@ -35,11 +35,31 @@ body {
 
 /* LOGO */
 .custom-navbar .navbar-brand img {
-  height: 100px;
+  height: 120px;
   width: auto;
   object-fit: contain;
    margin-left: 30px;
 }
+
+.logo-bordered {
+  border: 2px solid #136ab5;   /* blue line */
+  border-radius: 12px;         /* smooth corners */
+  padding: 10px;               /* space between image & border */
+  background: #ffffff;         /* white background */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* EQUAL SPACE MENU */
 .nav-equal-space {
@@ -109,6 +129,28 @@ body {
 
 
 /* <!-- ======================================== --> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   /* FULL SCREEN IMAGE SECTION */
 .fullscreen-image {
   width: 100%;
@@ -175,6 +217,7 @@ section {
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0;
+  justify-content: center;
 }
 
 /* RESPONSIVE */
@@ -185,41 +228,87 @@ section {
 }
 
 
+/* SECTION BACKGROUND */
 .text-image-section {
+  padding: 80px 20px;
   background: #F4FAFF;
-  padding: 50px 0;
 }
 
-/* FLEX WRAPPER */
-.text-image-wrapper {
+/* MAIN BOX */
+.content-box {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: center;
   gap: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  align-items: center;
 }
 
-/* ================= LEFT MATTER ================= */
+/* IMAGE */
+.image-box {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+/* TEXT */
 .text-box {
   flex: 1;
-  padding: 50px 40px;
-  
-  border-radius: 20px;
 }
 
 .text-box h2 {
-  color: #136ab5;;
   font-size: 36px;
+  color: #136ab5;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .text-box p {
-  color: #333333;
   font-size: 18px;
   line-height: 1.7;
+  color: #333;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .content-box {
+    flex-direction: column;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .image-box img {
+    height: 260px;
+  }
+
+  .text-box h2 {
+    font-size: 26px;
+  }
+
+  .text-box p {
+    font-size: 16px;
+  }
 }
 
 /* ================= RIGHT IMAGE ================= */
+/* BIG OUTER BOX */
+.creative-box {
+  max-width: 1400px;
+  margin: 80px auto;
+  padding: 60px 40px;
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
 .image-box {
   flex: 1;
   position: relative;
@@ -402,6 +491,22 @@ section {
 /* <!-- ======================================== --> */
 
 /* SERVICES SECTION BACKGROUND */
+
+.services-section {
+  position: relative;
+  margin-top: 30px;          /* 👈 moves About Us section down */
+  padding: 100px 20px;
+  text-align: center;
+
+
+  background:
+    linear-gradient(
+      rgba(10, 61, 98, 0.85),
+      rgba(10, 61, 98, 0.85)
+    ),
+    url('https://www.seagulladvertising.com/wp-seagull/wp-content/uploads/2021/11/Advertising-Agency.jpg')
+    center / cover no-repeat;
+}
 .services-section {
   background-color:#136ab5;;   /* light background */
   padding: 40px 20px; 
@@ -411,7 +516,8 @@ section {
 /* HEADING BOX */
 .services-heading-box {
   text-align: center;
-  margin-bottom: 50px;         /* 👈 NOT touching images */
+  justify-content: center;
+  margin-bottom: 30px;         /* 👈 NOT touching images */
 }
 
 /* HEADING */
@@ -419,7 +525,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 10px;
 }
 
@@ -427,6 +533,7 @@ section {
 .services-heading-box p {
   font-size: 16px;
   color: white;
+   margin-bottom: 20px;
 }
 
 /* SERVICES CONTENT AREA */
@@ -434,6 +541,89 @@ section {
   max-width: 1200px;
   margin: auto;
 }
+
+
+
+
+
+
+
+
+
+
+/* BIG OUTER BOX FOR GALLERY */
+.gallery-box {
+  max-width: 1500px;
+  margin: 80px auto;
+  padding: 60px 40px;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gallery-box {
+    padding: 40px 20px;
+  }
+}
+.gallery-content p {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .gallery-content p {
+    text-align: center;
+  }
+}
+
+/* SERVICE CARD CONTENT ALIGNMENT */
+.service-card p {
+  text-align: justify;
+}
+
+.service-card h3,
+.service-card i {
+  text-align: center;
+}
+
+/* Center bullet list nicely */
+.service-card ul {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 85%;
+}
+@media (max-width: 768px) {
+  .service-card p {
+    text-align: center;
+  }
+
+  .service-card ul {
+    text-align: center;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -534,6 +724,16 @@ section {
 /* RESET */
 
 /* SERVICES SECTION */
+
+
+
+
+
+
+
+
+
+
 .services-fa {
   padding: 90px 20px;
   background: #F4FAFF;
@@ -545,7 +745,7 @@ section {
   font-size: 38px;
   font-weight: 700;
   color: #136ab5;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 /* GRID — 4 PER ROW */
@@ -849,85 +1049,92 @@ section {
 .contact-wrapper {
   max-width: 1200px;
   margin: auto;
+}
+
+/* ONE BIG CARD */
+.contact-card {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 50px;
   display: flex;
   gap: 50px;
-  align-items: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* COMMON CARD STYLE */
-.contact-form,
-.contact-info {
-  background: #ffffff;
+/* LEFT */
+.contact-left {
+ flex: 1;
+  background: #F4FAFF;
+  border-radius: 20px;
   padding: 40px;
-  border-radius: 18px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
 }
 
-/* LEFT CARD */
-.contact-form {
-  flex: 1.2;
-}
-
-.contact-form h2 {
-  font-size: 32px;        /* size */
-  font-weight: 700;      /* bold */
+.contact-left h2 {
+  font-size: 32px;
   color: #136ab5;
   margin-bottom: 25px;
 }
 
-
-/* RIGHT CARD */
-.contact-info {
+/* RIGHT */
+.contact-right {
   flex: 1;
+  background: #F4FAFF;
+  border-radius: 20px;
+  padding: 40px;
 }
-.contact-info h3 {
+
+.contact-right h3 {
   font-size: 26px;
-  font-weight: 700;   /* BOLD */
-  color: #136ab5;;
+  color: #136ab5;
+  margin-bottom: 20px;
 }
 
-
-.contact-info p {
+.contact-right p {
   font-size: 16px;
   margin-bottom: 15px;
 }
 
-.contact-info i {
-  color: #136ab5;;
-  margin-right: 10px;
-}
-
-/* INPUTS */
+/* FORM */
 .form-row {
   display: flex;
   gap: 15px;
   margin-bottom: 15px;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+.contact-left input,
+.contact-left select,
+.contact-left textarea {
   width: 100%;
   padding: 14px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  margin-top: 10px;
 }
 
-.contact-form textarea {
+.contact-left textarea {
   height: 120px;
   resize: none;
 }
 
 /* BUTTON */
-.contact-form button {
-  background: #136ab5;;
-  color: #fff;
-  padding: 14px 40px;
-  border-radius: 50px;
-  border: none;
+.contact-left button {
   margin-top: 20px;
+  background: #136ab5;
+  color: #ffffff;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 992px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
 }
 
 /* ================= ANIMATIONS (VICE-VERSA) ================= */
