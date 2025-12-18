@@ -5,31 +5,33 @@
   <title>Akhila Ads</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- BOOTSTRAP CSS -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="icon" type="image/jpg" href="logo.jpg">
 
 
 
 
-  <!-- CUSTOM CSS -->
+
+  
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
+
 <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
   <div class="container">
 
-    <!-- LOGO -->
+    
     <a class="navbar-brand" href="#home">
       <img src="logo.jpg" class="logo-bordered" alt="Akhila Ads Logo">
 
     </a>
 
-    <!-- HAMBURGER -->
+    
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
             data-bs-target="#mainNavbar"
@@ -39,7 +41,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- NAV LINKS -->
+    
     <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
       <ul class="navbar-nav nav-equal-space">
 
@@ -80,69 +82,73 @@
   </div>
 </nav>
 
-<!-- ======================================== -->
-
-<section class="gallery-section">
-          
-
-
-       
-        <h1  style="text-align:center; font-weight:700; color:#136ab5;margin-top:-50px;">
-  Any Advertisement, One Powerful Solution
-</h1>
 
 
 
-<!-- FULL SCREEN SLIDESHOW -->
-<section id="home" class="fullscreen-slider">
 
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+  <div id="heroCarousel"
+     class="carousel slide carousel-fade"
+     data-bs-ride="carousel"
+     data-bs-interval="2000">
 
-    <!-- INDICATORS -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+  <!-- INDICATORS -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+  </div>
+
+  <!-- SLIDES -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://www.shutterstock.com/image-photo/digital-marketing-commerce-online-sale-600nw-2493638089.jpg"
+           class="d-block w-100">
     </div>
 
-    <!-- SLIDES -->
-    <div class="carousel-inner">
-
-      <div class="carousel-item active">
-        <img src="https://www.iisindia.net/images/blog/advertising-agency-iis.jpeg" class="d-block w-100" alt="Advertising Agency">
-      </div>
-
-      <div class="carousel-item">
-        <img src="https://stackby.com/blog/content/images/2022/05/advertising-agency-blog.png" class="d-block w-100" alt="Marketing Team">
-      </div>
-
-      <div class="carousel-item">
-        <img src="https://www.myhoardings.com/ads/wp-content/uploads/2021/02/adevertisting.jpg" class="d-block w-100" alt="Brand Promotion">
-      </div>
-
-      <div class="carousel-item">
-        <img src="https://colaninfotech.com/wp-content/uploads/2021/01/digitaladd.jpg" class="d-block w-100" alt="Creative Office">
-      </div>
-
+    <div class="carousel-item">
+      <img src="https://www.shutterstock.com/image-photo/business-digital-marketing-commerce-online-600nw-2475886765.jpg"
+           class="d-block w-100">
     </div>
 
-    <!-- CONTROLS -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
+    <div class="carousel-item">
+      <img src="https://www.shutterstock.com/image-photo/digital-marketing-targeting-concept-businessman-600nw-2510696459.jpg"
+           class="d-block w-100">
+    </div>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
+    <div class="carousel-item">
+      <img src="https://aaft.com/blog/wp-content/uploads/2025/05/advertising.jpg.webp"
+           class="d-block w-100">
+    </div>
 
   </div>
+
+  <!-- ✅ TEXT OVERLAY (CORRECT PLACE) -->
+  <div class="hero-overlay">
+    <h1>Creative Advertising Solutions</h1>
+    <p>We Grow Your Brand With Powerful Digital Marketing</p>
+    <a href="contact.html" class="hero-btn">Contact</a>
+  </div>
+
+  <!-- CONTROLS -->
+  <button class="carousel-control-prev" type="button"
+          data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button"
+          data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
 
 </section>
 
 
 
-<!-- ======================================== -->
+
 <section class="about-section" id="about">
   <div class="about-overlay">
     <h2 class="about-title">About us</h2>
@@ -150,16 +156,16 @@
 </section>
 
 
-<!-- =========================================== -->
+
 <section class="text-image-section">
   <div class="content-box">
 
-    <!-- IMAGE -->
+   
     <div class="image-box">
       <img src="https://png.pngtree.com/thumb_back/fh260/background/20221213/pngtree-gritty-setting-for-an-advertising-agency-dark-grunge-room-photo-image_23376360.jpg" alt="Advertising Image">
     </div>
 
-    <!-- TEXT -->
+   
     <div class="text-box">
       <h2>About Us</h2>
       <p>
@@ -173,7 +179,7 @@
 </section>
 
 
-<!-- ======================================== -->
+
 
   <div class="creative-box">
 
@@ -220,20 +226,18 @@
 </div>
 
 
-<!-- ======================================== -->
- 
-<!-- SERVICES SECTION -->
+
 <section class="services-section" id="services">
 
-  <!-- SERVICES HEADING -->
+ 
   <div class="services-heading-box">
     <h2>Our Services</h2>
     <p>Complete Advertising & Promotion Solutions</p>
   </div>
 
-  <!-- SERVICES CONTENT -->
+  
   <div class="services-container">
-    <!-- service cards / images go here -->
+   
   </div>
 
 </section>
@@ -243,7 +247,7 @@
 
 
 
-                         <!-- SERVICES SECTION -->
+                        
 
   
 
@@ -307,19 +311,19 @@
 
 
 
-<!-- ======================================= -->
+
  <section class="services-fa">
-<!-- HEADING -->
+
     <h1 class="services-title"
         style="text-align:center; font-weight:700; color:#136ab5; margin-bottom:40px;">
       Expertise
     </h1>
-  <!-- BIG OUTER WHITE BOX -->
+  
   <div class="services-box">
 
     
 
-    <!-- SERVICES GRID -->
+    
     <div class="services-grid">
 
       <div class="service-card">
@@ -470,56 +474,56 @@
 
 </section>
 
-<!-- ================================================= -->
+
  <section class="clients-section">
   <h2>OUR CLIENTS FROM HYDERABAD</h2>
 
   <marquee behavior="scroll" direction="left" scrollamount="6">
     <div class="logo-row">
 
-      <!-- Hospital 1 -->
+      
       <div class="logo-box">
         <img src="https://cdn-icons-png.flaticon.com/512/2967/2967350.png" alt="">
         <p>Life Care Hospital</p>
       </div>
 
-      <!-- Hospital 2 -->
+      
       <div class="logo-box">
         <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="">
         <p>Sri Sai Multispeciality</p>
       </div>
 
-      <!-- Hospital 3 -->
+      
       <div class="logo-box">
         <img src="https://cdn-icons-png.flaticon.com/512/3004/3004458.png" alt="">
         <p>Health Plus Clinic</p>
       </div>
 
-      <!-- Restaurant 1 -->
+      
       <div class="logo-box">
         <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="">
         <p>Spice Garden Restaurant</p>
       </div>
 
-      <!-- Restaurant 2 -->
+      
       <div class="logo-box">
         <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="">
         <p>Tasty Bites Kitchen</p>
       </div>
 
-      <!-- Restaurant 3 -->
+      
       <div class="logo-box">
         <img src="https://cdn-icons-png.flaticon.com/512/3075/3075908.png" alt="">
         <p>Royal Food Court</p>
       </div>
 
-      <!-- Clinic -->
+      
       <div class="logo-box">
         <img src="https://cdn-icons-png.flaticon.com/512/599/599305.png" alt="">
         <p>City Dental Care</p>
       </div>
 
-      <!-- Cafe -->
+      
       <div class="logo-box">
         <img src="https://cdn-icons-png.flaticon.com/512/590/590836.png" alt="">
         <p>Urban Cafe</p>
@@ -528,7 +532,7 @@
     </div>
   </marquee>
 </section>
-<!-- =============================== -->
+
  <section class="gallery-section">
           
 
@@ -541,11 +545,11 @@
           
   
 
-  <div class="gallery-box">   <!-- 👈 BIG BOX START -->
+  <div class="gallery-box">   
 
     <div class="gallery-wrapper">
 
-      <!-- LEFT CONTENT -->
+      
       <div class="gallery-content">
         <h2>Our Advertising Gallery</h2>
         <p>
@@ -556,7 +560,7 @@
         </p>
       </div>
 
-      <!-- RIGHT GALLERY WITH MARQUEE -->
+      
       <div class="gallery-marquee">
         <marquee behavior="scroll" direction="left" scrollamount="6" pauseonhover="true">
           <div class="gallery-grid marquee-grid">
@@ -591,17 +595,17 @@
 
     </div>
 
-  </div>  <!-- 👈 BIG BOX END -->
+  </div> 
 
 </section>
 
 
-<!-- ====================================== -->
+
 
 
 <section class="contact-box">
 
-  <!-- CONTACT TITLE -->
+
   <section class="contact-section" id="contact">
     <div class="contact-overlay">
       <h2 class="contact-title">Contact Us</h2>
@@ -611,10 +615,10 @@
   <section class="contact-page">
   <div class="contact-wrapper">
 
-    <!-- ONE WHITE CARD -->
+    
     <div class="contact-card">
 
-      <!-- LEFT SIDE -->
+      
       <div class="contact-left">
         <h2>Let’s Talk what you're thinking</h2>
 
@@ -646,7 +650,7 @@
         </form>
       </div>
 
-      <!-- RIGHT SIDE -->
+    
       <div class="contact-right">
         <h3>Akhila Ads</h3>
 
@@ -661,7 +665,7 @@
   </div>
 </section>
 
-<!-- ================================================== -->
+
  <footer class="main-footer">
 
   <div class="footer-overlay"></div>
@@ -672,40 +676,35 @@
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul class="footer-links">
-        <li><i class="bi bi-chevron-right"></i> Home </li>
-        <li><i class="bi bi-chevron-right"></i> About Us</li>
-        <li><i class="bi bi-chevron-right"></i> Services</li>
-        <li><i class="bi bi-chevron-right"></i> Contact Us</li>
+        <li><a href="index.html"></i> Home</a></li>
+        <li><a href="about.html"></i> About Us</a></li>
+        <li><a href="services.html"></i> Services</a></li>
+        <li><a href="contact.html"></i> Contact Us</a></li>
       </ul>
     </div>
 
     <!-- REACH US -->
     <div class="footer-col">
       <h4>Reach Us</h4>
-
       <p><i class="bi bi-geo-alt"></i> <strong>Hyderabad</strong></p>
       <p class="small">
-        H.No: 11-5-279/1, 2st Floor, H.P Road,<br>
+        H.No: 11-5-279/1, 2nd Floor, H.P Road,<br>
         Miyapur, Hyderabad,<br>
         Telangana – 500018
       </p>
-
     </div>
 
     <!-- CONTACT INFO -->
     <div class="footer-col">
       <h4>Contact Info</h4>
-
       <p><i class="bi bi-envelope"></i> akhilaads2017@gmail.com</p>
-
       <p><i class="bi bi-telephone"></i> +91 9908262349</p>
       <p><i class="bi bi-telephone"></i> +91 8790801171</p>
     </div>
 
-    <!-- FOLLOW US -->
+    <!-- SOCIAL -->
     <div class="footer-col">
       <h4>Follow Us On</h4>
-
       <div class="social-icons">
         <a href="#"><i class="bi bi-facebook"></i></a>
         <a href="#"><i class="bi bi-instagram"></i></a>
@@ -715,14 +714,12 @@
 
   </div>
 
-  <!-- COPYRIGHT -->
+  <!-- FOOTER BOTTOM -->
   <div class="footer-bottom">
     © 2025 All Rights Reserved by Akhila Ads
   </div>
 
 </footer>
-
-
 
 
 
@@ -746,6 +743,7 @@
     });
   });
 </script>
+
 
 
 

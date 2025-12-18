@@ -1,13 +1,13 @@
 :root {
-  --primary-color: #136ab5;   /* main brand blue */
-  --secondary-color: #253144; /* dark blue (header/footer) */
-  --accent-color: #4FA3E3;    /* hover / underline */
-  --bg-color: #F4FAFF;        /* page background */
-  --text-color: #333333;      /* normal text */
+  --primary-color: #136ab5;   
+  --secondary-color: #253144; 
+  --accent-color: #4FA3E3;    
+  --bg-color: #F4FAFF;        
+  --text-color: #333333;      
   --white: #ffffff;
 }
 
-/* ================= BODY ================= */
+
 
 body {
   margin: 0;
@@ -17,35 +17,37 @@ body {
   color: var(--text-color);
   line-height: 1.6;
 
-   /* adjust to navbar height */
+   
 }
 
 
 
-/* ================= HEADER ================= */
+
 
 .custom-navbar {
   background-color: white;
   padding: 12px 0;
-  position: sticky;   /* 👈 makes navbar stick */
-  top: 0;             /* 👈 sticks to top */
-  z-index: 9999;      /* 👈 stays above all sections */
+  position: sticky;   
+  top: 0;             
+  z-index: 9999;     
 }
 
 
-/* LOGO */
+
 .custom-navbar .navbar-brand img {
-  height: 120px;
+  height: 80px;
   width: auto;
   object-fit: contain;
    margin-left: 30px;
 }
 
-.logo-bordered {
-  border: 2px solid #136ab5;   /* blue line */
-  border-radius: 12px;         /* smooth corners */
-  padding: 10px;               /* space between image & border */
-  background: #ffffff;         /* white background */
+.logo-bordered{
+  width: 120px;          /* adjust size */
+  height: 120px;         /* equal width & height = square */
+  border: 2px solid #136ab5; /* border color */
+  padding: 0;            /* image touches border */
+  object-fit: cover;     /* fills square without gaps */
+  box-sizing: border-box;
 }
 
 
@@ -61,10 +63,10 @@ body {
 
 
 
-/* EQUAL SPACE MENU */
+
 .nav-equal-space {
   display: flex;
-  gap: 40px;   /* EQUAL SPACE BETWEEN LINKS */
+  gap: 40px;   
 }
 
 /* LINKS */
@@ -93,7 +95,6 @@ body {
   width: 100%;
 }
 
-/* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 991px) {
 
   .nav-equal-space {
@@ -113,22 +114,21 @@ body {
     border-radius: 10px;
   }
 }
-/* TABLET */
+
 @media (max-width: 991px) {
   .custom-navbar .navbar-brand img {
-    height: 70px;       /* auto shrink */
+    height: 70px;      
   }
 }
 
 /* MOBILE */
 @media (max-width: 576px) {
   .custom-navbar .navbar-brand img {
-    height: 55px;       /* still visible, not broken */
+    height: 55px;      
   }
 }
 
 
-/* <!-- ======================================== --> */
 
 
 
@@ -151,28 +151,120 @@ body {
 
 
 
-                  /* FULL SCREEN IMAGE SECTION */
-.fullscreen-image {
+
+      
+
+
+
+/* FULL SCREEN HERO CAROUSEL */
+#heroCarousel,
+#heroCarousel .carousel-inner,
+#heroCarousel .carousel-item {
   width: 100%;
-  height: 100vh;          /* full screen height */
-  overflow: hidden;
+  height: 100vh;            /* full screen height */
 }
 
-/* IMAGE */
-.fullscreen-image img {
+#heroCarousel img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;     /* fills screen without stretching */
-  display: block;
+  height: 100vh;
+  object-fit: cover;        /* fills screen without distortion */
 }
- 
-/* MOBILE FIX */
+
+/* Remove side gaps if inside container */
+body {
+  margin: 0;
+}
+/* HERO OVERLAY LEFT */
+#heroCarousel {
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 8%;                 /* distance from left */
+  transform: translateY(-50%);
+  text-align: left;
+  color: #fff;
+  z-index: 10;
+  max-width: 500px;
+}
+
+/* Heading */
+.hero-overlay h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Sub text */
+.hero-overlay p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* CONTACT BUTTON */
+.hero-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #136ab5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #019497;
+}
+
+
 @media (max-width: 768px) {
-  .fullscreen-image {
-    height: 60vh;         /* better for mobile */
+  .hero-overlay {
+    left: 5%;
+    right: 5%;
+    max-width: 100%;
+  }
+
+  .hero-overlay h1 {
+    font-size: 28px;
+  }
+
+  .hero-overlay p {
+    font-size: 15px;
   }
 }
+#heroCarousel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 5;
+}
+#heroCarousel {
+  position: relative;
+}
 
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #fff;
+  max-width: 500px;
+}
+/* Allow clicks to pass through overlay except button */
+.hero-overlay {
+  pointer-events: none;
+}
+
+/* Re-enable clicks ONLY for Contact button */
+.hero-overlay .hero-btn {
+  pointer-events: auto;
+}
 
 
 
@@ -184,19 +276,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Offset anchor scroll for fixed navbar */
+
 section {
-  scroll-margin-top: 120px; /* height of navbar */
+  scroll-margin-top: 120px; 
 }
 
 
 
-/* <!-- ======================================== --> */
-/* SECTION */
 
 .about-section {
   position: relative;
-  margin-top: 30px;          /* 👈 moves About Us section down */
+  margin-top: 30px;        
   padding: 100px 20px;
   text-align: center;
 
@@ -210,7 +300,7 @@ section {
     center / cover no-repeat;
 }
 
-/* HEADING */
+
 .about-title {
   color: #ffffff;
   font-size: 38px;
@@ -220,7 +310,7 @@ section {
   justify-content: center;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 576px) {
   .contact-title {
     font-size: 28px;
@@ -228,13 +318,13 @@ section {
 }
 
 
-/* SECTION BACKGROUND */
+
 .text-image-section {
   padding: 80px 20px;
   background: #F4FAFF;
 }
 
-/* MAIN BOX */
+
 .content-box {
   max-width: 1200px;
   margin: auto;
@@ -247,7 +337,7 @@ section {
   align-items: center;
 }
 
-/* IMAGE */
+
 .image-box {
   flex: 1;
   border-radius: 16px;
@@ -260,7 +350,7 @@ section {
   object-fit: cover;
 }
 
-/* TEXT */
+
 .text-box {
   flex: 1;
 }
@@ -278,7 +368,7 @@ section {
   color: #333;
 }
 
-/* MOBILE RESPONSIVE */
+
 @media (max-width: 768px) {
   .content-box {
     flex-direction: column;
@@ -299,8 +389,7 @@ section {
   }
 }
 
-/* ================= RIGHT IMAGE ================= */
-/* BIG OUTER BOX */
+
 .creative-box {
   max-width: 1400px;
   margin: 80px auto;
@@ -313,11 +402,11 @@ section {
   flex: 1;
   position: relative;
   margin-top: 20px;
-  border-radius: 20px;   /* ✅ border radius all sides */
-  overflow: hidden;      /* ✅ important */
+  border-radius: 20px;     
+  overflow: hidden;    
 }
 
-/* IMAGE */
+
 .image-box img {
   width: 100%;
   height: 420px;
@@ -325,21 +414,19 @@ section {
   display: block;
 }
 
-/* IMAGE OVERLAY */
+
 .image-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.25);
 }
 
-/* ================= ANIMATIONS ================= */
 
-/* LEFT MATTER ANIMATION */
 .animate-left {
   animation: slideFromLeft 1.2s ease forwards;
 }
 
-/* RIGHT IMAGE ANIMATION */
+
 .animate-right {
   animation: slideFromRight 1.2s ease forwards;
 }
@@ -366,7 +453,6 @@ section {
   }
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
 
   .text-image-wrapper {
@@ -391,15 +477,12 @@ section {
   }
 }
 
-/* <!-- ======================================== --> */
 
-/* SECTION */
 .creative-whyus {
   background: linear-gradient(135deg, #F4FAFF, #EAF3FF);
   padding: 80px 20px;
 }
 
-/* HEADING */
 .creative-heading {
   text-align: center;
   font-size: 38px;
@@ -408,7 +491,7 @@ section {
   margin-bottom: 60px;
 }
 
-/* GRID */
+
 .creative-grid {
   max-width: 1200px;
   margin: auto;
@@ -428,7 +511,7 @@ section {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* FLOATING ICON */
+
 .icon-circle {
   position: absolute;
   top: -30px;
@@ -462,13 +545,13 @@ section {
   line-height: 1.6;
 }
 
-/* HOVER EFFECT */
+
 .creative-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
 
-/* ================= RESPONSIVE ================= */
+
 @media (max-width: 992px) {
   .creative-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -488,13 +571,11 @@ section {
 
 
 
-/* <!-- ======================================== --> */
 
-/* SERVICES SECTION BACKGROUND */
 
 .services-section {
   position: relative;
-  margin-top: 30px;          /* 👈 moves About Us section down */
+  margin-top: 30px;          
   padding: 100px 20px;
   text-align: center;
 
@@ -508,19 +589,19 @@ section {
     center / cover no-repeat;
 }
 .services-section {
-  background-color:#136ab5;;   /* light background */
+  background-color:#136ab5;;   
   padding: 40px 20px; 
-  margin-top: 20px;         /* space top & bottom */
+  margin-top: 20px;         
 }
 
-/* HEADING BOX */
+
 .services-heading-box {
   text-align: center;
   justify-content: center;
-  margin-bottom: 30px;         /* 👈 NOT touching images */
+  margin-bottom: 30px;         /
 }
 
-/* HEADING */
+
 .services-heading-box h2 {
   font-size: 36px;
   font-weight: 700;
@@ -529,14 +610,14 @@ section {
   border-radius: 10px;
 }
 
-/* SUB TEXT */
+
 .services-heading-box p {
   font-size: 16px;
   color: white;
    margin-bottom: 20px;
 }
 
-/* SERVICES CONTENT AREA */
+
 .services-container {
   max-width: 1200px;
   margin: auto;
@@ -551,7 +632,7 @@ section {
 
 
 
-/* BIG OUTER BOX FOR GALLERY */
+
 .gallery-box {
   max-width: 1500px;
   margin: 80px auto;
@@ -577,7 +658,7 @@ section {
   }
 }
 
-/* SERVICE CARD CONTENT ALIGNMENT */
+
 .service-card p {
   text-align: justify;
 }
@@ -587,7 +668,7 @@ section {
   text-align: center;
 }
 
-/* Center bullet list nicely */
+
 .service-card ul {
   text-align: left;
   margin: 0 auto;
@@ -627,13 +708,10 @@ section {
 
 
 
-                          /* SERVICES SECTION */
-/* SERVICES SECTION */
 
 
 
 
-/* GRID – 5 PER ROW */
 .tile-grid {
   max-width: 1400px;
   margin: auto;
@@ -644,7 +722,7 @@ section {
  
 }
 
-/* CARD */
+
 .tile-card {
   background: linear-gradient(135deg, #EAF2FF, #FFFFFF);
   height: 240px;
@@ -661,13 +739,13 @@ section {
   
 }
 
-/* ICON */
+
 .tile-card img {
   width: 65px;
   filter: drop-shadow(0 4px 8px rgba(10, 61, 98, 0.25));
 }
 
-/* TEXT */
+
 .tile-card h3 {
   font-size: 16px;
   font-weight: 600;
@@ -675,23 +753,19 @@ section {
   line-height: 1.4;
 }
 
-/* HOVER */
+
 .tile-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 24px 50px rgba(10, 61, 98, 0.28);
 }
 
-/* ================= ZIG-ZAG (5 PER ROW) ================= */
-/* Pattern: ↑ ↓ ↑ ↓ ↑ */
 
 .tile-card:nth-child(5n + 2),
 .tile-card:nth-child(5n + 4) {
   transform: translateY(35px);
 }
 
-/* ================= RESPONSIVE ================= */
 
-/* DESKTOP → TABLET */
 @media (max-width: 1200px) {
   .tile-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -702,14 +776,14 @@ section {
   }
 }
 
-/* TABLET */
+
 @media (max-width: 768px) {
   .tile-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* MOBILE */
+
 @media (max-width: 480px) {
   .tile-grid {
     grid-template-columns: 1fr;
@@ -719,11 +793,7 @@ section {
     font-size: 28px;
   }
 }
-/* ================================================= */
 
-/* RESET */
-
-/* SERVICES SECTION */
 
 
 
@@ -739,7 +809,7 @@ section {
   background: #F4FAFF;
 }
 
-/* HEADING */
+
 .services-title {
   text-align: center;
   font-size: 38px;
@@ -748,16 +818,16 @@ section {
   margin-bottom: 40px;
 }
 
-/* GRID — 4 PER ROW */
+
 .services-grid {
   max-width: 1400px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 👈 4 images per row */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 35px;
 }
 
-/* CARD */
+
 .service-card {
   background: #ffffff;
   border: 2px solid #E1ECF7;
@@ -767,21 +837,20 @@ section {
   transition: 0.35s ease;
 }
 
-/* FONT AWESOME ICON (NO BACKGROUND) */
+
 .service-card i {
   font-size: 44px;
   color: #136ab5;;
   margin-bottom: 20px;
 }
 
-/* TITLE */
+
 .service-card h3 {
   font-size: 20px;
   color: #136ab5;
   margin-bottom: 14px;
 }
 
-/* PARAGRAPH */
 .service-card p {
   font-size: 15px;
   color: #555;
@@ -789,7 +858,7 @@ section {
   margin-bottom: 20px;
 }
 
-/* BULLET POINTS */
+
 .service-card ul {
   padding-left: 18px;
   text-align: left;
@@ -801,29 +870,27 @@ section {
   margin-bottom: 8px;
 }
 
-/* HOVER EFFECT */
+
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 22px 45px rgba(10, 61, 98, 0.2);
 }
 
-/* ================= RESPONSIVE ================= */
 
-/* LAPTOP / TABLET */
 @media (max-width: 1200px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr); /* 3 per row */
   }
 }
 
-/* TABLET */
+
 @media (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 per row */
   }
 }
 
-/* MOBILE */
+
 @media (max-width: 576px) {
   .services-grid {
     grid-template-columns: 1fr; /* 1 per row */
@@ -833,7 +900,7 @@ section {
     font-size: 28px;
   }
 }
-/* ======================================= */
+
 .clients-section {
   background: linear-gradient(135deg, #136ab5, #0A3D62);
   padding: 55px 0;
@@ -848,14 +915,14 @@ section {
   letter-spacing: 1px;
 }
 
-/* Marquee row */
+
 .logo-row {
   display: flex;
   align-items: center;
   gap: 35px;
 }
 
-/* Logo card */
+
 .logo-box {
   background: #ffffff;
   padding: 15px 20px;
@@ -869,13 +936,13 @@ section {
   box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
-/* Logo image */
+
 .logo-box img {
   max-height: 45px;
   margin-bottom: 8px;
 }
 
-/* Client name */
+
 .logo-box p {
   font-size: 14px;
   font-weight: 600;
@@ -883,7 +950,7 @@ section {
   margin: 0;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .clients-section h2 {
     font-size: 22px;
@@ -902,8 +969,7 @@ section {
     font-size: 12px;
   }
 }
-/* ========================================= */
-/* SECTION */
+
 .gallery-section {
   padding: 90px 20px;
   background: #F4FAFF;
@@ -917,7 +983,7 @@ section {
   align-items: center;
 }
 
-/* LEFT CONTENT */
+
 .gallery-content {
   flex: 1;
   animation: slideLeft 1s ease forwards;
@@ -935,20 +1001,20 @@ section {
   line-height: 1.8;
 }
 
-/* MARQUEE WRAPPER */
+
 .gallery-marquee {
   flex: 1.4;
   overflow: hidden;
   animation: slideRight 1s ease forwards;
 }
 
-/* GRID INSIDE MARQUEE */
+
 .marquee-grid {
   display: flex;
   gap: 20px;
 }
 
-/* IMAGE CARD */
+
 .gallery-item {
   min-width: 260px;
   border-radius: 18px;
@@ -964,7 +1030,7 @@ section {
   transition: transform 0.6s ease;
 }
 
-/* HOVER EFFECT */
+
 .gallery-item:hover img {
   transform: scale(1.15);
 }
@@ -974,7 +1040,7 @@ section {
   box-shadow: 0 30px 60px rgba(10,61,98,0.35);
 }
 
-/* ANIMATIONS */
+
 @keyframes slideLeft {
   from { opacity: 0; transform: translateX(-60px); }
   to { opacity: 1; transform: translateX(0); }
@@ -985,7 +1051,7 @@ section {
   to { opacity: 1; transform: translateX(0); }
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 992px) {
   .gallery-wrapper {
     flex-direction: column;
@@ -1008,9 +1074,7 @@ section {
 }
 
 
-/* ======================== */
-/* PAGE */
-/* PAGE */
+
 .contact-section {
   position: relative;
   padding: 100px 20px;
@@ -1024,7 +1088,7 @@ section {
     center / cover no-repeat;
 }
 
-/* CONTACT HEADING */
+
 .contact-title {
   color: #ffffff;
   font-size: 38px;
@@ -1033,7 +1097,7 @@ section {
   margin: 0;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 576px) {
   .contact-title {
     font-size: 28px;
@@ -1045,13 +1109,13 @@ section {
   padding: 90px 20px;
 }
 
-/* WRAPPER */
+
 .contact-wrapper {
   max-width: 1200px;
   margin: auto;
 }
 
-/* ONE BIG CARD */
+
 .contact-card {
   background: #ffffff;
   border-radius: 25px;
@@ -1061,7 +1125,7 @@ section {
   box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* LEFT */
+
 .contact-left {
  flex: 1;
   background: #F4FAFF;
@@ -1075,7 +1139,7 @@ section {
   margin-bottom: 25px;
 }
 
-/* RIGHT */
+
 .contact-right {
   flex: 1;
   background: #F4FAFF;
@@ -1094,7 +1158,7 @@ section {
   margin-bottom: 15px;
 }
 
-/* FORM */
+
 .form-row {
   display: flex;
   gap: 15px;
@@ -1115,7 +1179,7 @@ section {
   resize: none;
 }
 
-/* BUTTON */
+
 .contact-left button {
   margin-top: 20px;
   background: #136ab5;
@@ -1126,7 +1190,7 @@ section {
   cursor: pointer;
 }
 
-/* MOBILE */
+
 @media (max-width: 992px) {
   .contact-card {
     flex-direction: column;
@@ -1137,16 +1201,14 @@ section {
   }
 }
 
-/* ================= ANIMATIONS (VICE-VERSA) ================= */
 
-/* LEFT CARD → moves LEFT ➜ RIGHT */
 .card-left {
   opacity: 0;
   transform: translateX(-80px);
   animation: slideLeftRight 1s ease forwards;
 }
 
-/* RIGHT CARD → moves RIGHT ➜ LEFT */
+
 .card-right {
   opacity: 0;
   transform: translateX(80px);
@@ -1175,7 +1237,7 @@ section {
   }
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 992px) {
   .contact-wrapper {
     flex-direction: column;
@@ -1185,7 +1247,7 @@ section {
     flex-direction: column;
   }
 }
-/* =========================== */
+
 .main-footer {
   position: relative;
   background: url('https://www.seagulladvertising.com/wp-seagull/wp-content/uploads/2021/11/Advertising-Agency.jpg') center/cover no-repeat;
@@ -1193,7 +1255,7 @@ section {
   padding-top: 70px;
 }
 
-/* BLUE OVERLAY */
+
 .footer-overlay {
   position: absolute;
   inset: 0;
@@ -1202,7 +1264,7 @@ section {
   z-index: 1;
 }
 
-/* CONTENT */
+
 .footer-container {
   position: relative;
   z-index: 2;
@@ -1214,14 +1276,14 @@ section {
   gap: 40px;
 }
 
-/* HEADINGS */
+
 .footer-col h4 {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-/* LINKS */
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -1232,11 +1294,22 @@ section {
   font-size: 15px;
 }
 
+.footer-links li a {
+  color: white;              /* link text white */
+  text-decoration: none;     /* remove underline */
+  display: inline-block;     /* keeps spacing clean */
+}
+
+.footer-links li a:hover {
+  color: #02b5b8;            /* optional hover color */
+}
+
 .footer-links i {
   margin-right: 8px;
 }
 
-/* TEXT */
+
+
 .footer-col p {
   font-size: 15px;
   margin-bottom: 10px;
@@ -1247,12 +1320,12 @@ section {
   opacity: 0.9;
 }
 
-/* ICONS */
+
 .footer-col i {
   margin-right: 8px;
 }
 
-/* SOCIAL */
+
 .social-icons a {
   display: inline-flex;
   width: 42px;
@@ -1272,7 +1345,7 @@ section {
   color: #136ab5;;
 }
 
-/* COPYRIGHT */
+
 .footer-bottom {
   position: relative;
   z-index: 2;
@@ -1282,7 +1355,7 @@ section {
   background: rgba(0,0,0,0.25);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
